@@ -1,9 +1,9 @@
 {
     "name": "blankkids/thinkphp-ddd",
-    "version": "1.0.0",
-    "description": "TP50 DDD 代码生成工具 - 包含 thinkex 命令行工具、基础领域层和代码生成扩展类",
+    "version": "5.0.0",
+    "description": "ThinkPHP 5.0 DDD 代码生成工具与基础架构包",
+    "type": "composer-plugin",
     "license": "Apache-2.0",
-    "plugin-api": "^2.0",
     "authors": [
         {
             "name": "blankkids",
@@ -18,30 +18,22 @@
     ],
     "require": {
         "php": ">=7.2.0",
+        "composer-plugin-api": "^2.0",
         "topthink/framework": "5.0.*"
     },
     "autoload": {
         "psr-4": {
-            "extend\\thinkex\\": "extend/thinkex/",
-            "extend\\thinktest\\": "extend/thinktest/",
-            "extend\\utils\\": "extend/utils/",
-            "domain\\base\\": "domain/base/",
-            "blankkids\\thinkex\\": "src/"
-        }
-    },
-    "autoload-dev": {
-        "psr-4": {
-            "blankkids\\thinkex\\": "src/"
+            "Blankkids\\ThinkphpDdd\\": "src/"
         }
     },
     "bin": [
-        "thinkex",
-        "tool"
+        "bin/thinkex",
+        "bin/tool"
     ],
     "extra": {
-        "think-config": {
-            "thinkex": {}
-        },
-        "class": "blankkids\\thinkex\\Plugin\\ThinkExPlugin"
+        "class": "Blankkids\\ThinkphpDdd\\Plugin\\ThinkExPlugin"
+    },
+    "config": {
+        "sort-packages": true
     }
 }

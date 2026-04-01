@@ -1,6 +1,6 @@
 <?php
 
-namespace blankkids\thinkex\Plugin;
+namespace Blankkids\ThinkphpDdd\Plugin;
 
 use Composer\Composer;
 use Composer\IO\IOInterface;

@@ -66,6 +66,23 @@ domain/
 ```bash
 composer require blankkids/thinkphp-ddd
 ```
+## 需要再config.php中加入配置
+
+```bash
+'cache' => [
+        'type' => 'redis',
+        // 缓存保存目录
+        'path' => CACHE_PATH,
+        // 缓存前缀
+        'prefix' => '',
+        'password' => '',
+        'select' => '0',
+        'scheme' => 'tcp',
+        'host' => '127.0.0.1',
+        'port' => '6379',
+        'expire' => 600,
+    ]
+```
 
 ## 使用方法
 
